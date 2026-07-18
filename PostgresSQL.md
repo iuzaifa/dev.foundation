@@ -55,3 +55,5 @@ PostgreSQL Exercises
 PostgreSQL Quiz
 PostgreSQL Syllabus
 PostgreSQL Study Plan
+
+57

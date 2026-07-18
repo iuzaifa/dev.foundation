@@ -1,196 +1,141 @@
-Java Tutorial
-Java HOME
-Java Intro
-Java Get Started
-Java Syntax
-Java Output
-Java Comments
-Java Variables
-Java Data Types
-Java Type Casting
-Java Operators
-Java Strings
-Java Math
-Java Booleans
-Java If...Else
-Java Switch
-Java While Loop
-Java For Loop
-Java Break/Continue
-Java Arrays
-
-Java Methods
-Java Methods
-Java Method Challenge
-Java Method Parameters
-Java Method Overloading
-Java Scope
-Java Recursion
-
-Java Classes
-Java OOP
-Java Classes/Objects
-Java Class Attributes
-Java Class Methods
-Java Class Challenge
-Java Constructors
-Java this Keyword
-Java Modifiers
-Java Encapsulation
-Java Packages / API
-Java Inheritance
-Java Polymorphism
-Java super Keyword
-Java Inner Classes
-Java Abstraction
-Java Interface
-Java Anonymous
-Java Enum
-Java User Input
-Java Date
-
-Java Errors
-Java Errors
-Java Debugging
-Java Exceptions
-Java Multiple Exceptions
-Java try-with-resources
-
-Java File Handling
-Java Files
-Java Create Files
-Java Write Files
-Java Read Files
-Java Delete Files
-
-Java I/O Streams
-Java I/O Streams
-Java FileInputStream
-Java FileOutputStream
-Java BufferedReader
-Java BufferedWriter
-
-Java Data Structures
-Java Data Structures
-Java Collections
-Java List
-Java ArrayList
-Java LinkedList
-Java List Sorting
-Java Set
-Java HashSet
-Java TreeSet
-Java LinkedHashSet
-Java Map
-Java HashMap
-Java TreeMap
-Java LinkedHashMap
-Java Iterator
-Java Algorithms
-
-Java Advanced
-Java Wrapper Classes
-Java Generics
-Java Annotations
-Java RegEx
-Java Threads
-Java Lambda
-Java Advanced Sorting
-
-Java Projects
-Java Projects
-
-Java Cert
-Java Certificate
-
-Java How To's
-Java How Tos
-
-Java Reference
-Java Reference
-Java Keywords
-Java String Methods
-Java Math Methods
-Java Output Methods
-Java Arrays Methods
-Java ArrayList Methods
-Java LinkedList Methods
-Java HashMap Methods
-Java Scanner Methods
-Java File Methods
-Java FileInputStream
-Java FileOutputStream
-Java BufferedReader
-Java BufferedWriter
-Java Iterator Methods
-Java Collections Methods
-Java System Methods
-Java Errors & Exceptions
-
-Java Examples
-Java Examples
-Java Videos
-Java Compiler
-Java Exercises
-Java Quiz
-Java Code Challenges
-Java Practice Problems
-Java Server
-Java Syllabus
-Java Study Plan
-Java Interview Q&A
-----------------------------------------
-JS Tutorial
-JS Home
-JS Introduction
-JS Where To
-JS Output
-JS Syntax
-JS Operators
-JS If Conditions
-JS Loops
-JS Strings
-JS Numbers
-JS Functions
-JS Timers
-JS Objects
-JS Scope
-JS Dates
-JS Temporal  New
-JS Arrays
-JS Sets
-JS Maps
-JS Iterations
-JS Math
-JS RegExp
-JS Data Types
-JS JSON
-JS Errors
-JS Debugging
-JS Style Guide
-JS Reference
-JS Projects  New
-JS Versions
-JS HTML DOM
-JS HTML Events
-JS HTML First
-
-JS Advanced
-JS Functions
-JS Objects
-JS Classes
-JS Asynchronous
-JS Modules
-JS Meta & Proxy
-JS Typed Arrays
-JS DOM Navigation
-JS Browser API
-JS Web API
-JS Graphics
-
-Old Technologies
-JS AJAX
-JS jQuery
-
-JS Examples
-JS Examples
+- Java Tutorial
+- Java HOME
+- Java Intro
+- Java Get Started
+- Java Syntax
+- Java Output
+- Java Comments
+- Java Variables
+- Java Data Types
+- Java Type Casting
+- Java Operators
+- Java Strings
+- Java Math
+- Java Booleans
+- Java If...Else
+- Java Switch
+- Java While Loop
+- Java For Loop
+- Java Break/Continue
+- Java Arrays
+--- 
+- Java Methods
+- Java Methods
+- Java Method Challenge
+- Java Method Parameters
+- Java Method Overloading
+- Java Scope
+- Java Recursion
+--- 
+- Java Classes
+- Java OOP
+- Java Classes/Objects
+- Java Class Attributes
+- Java Class Methods
+- Java Class Challenge
+- Java Constructors
+- Java this Keyword
+- Java Modifiers
+- Java Encapsulation
+- Java Packages / API
+- Java Inheritance
+- Java Polymorphism
+- Java super Keyword
+- Java Inner Classes
+- Java Abstraction
+- Java Interface
+- Java Anonymous
+- Java Enum
+- Java User Input
+- Java Date
+--- 
+- Java Errors
+- Java Errors
+- Java Debugging
+- Java Exceptions
+- Java Multiple Exceptions
+- Java try-with-resources
+--- 
+- Java File Handling
+- Java Files
+- Java Create Files
+- Java Write Files
+- Java Read Files
+- Java Delete Files
+--- 
+- Java I/O Streams
+- Java I/O Streams
+- Java FileInputStream
+- Java FileOutputStream
+- Java BufferedReader
+- Java BufferedWriter
+--- 
+- Java Data Structures
+- Java Data Structures
+- Java Collections
+- Java List
+- Java ArrayList
+- Java LinkedList
+- Java List Sorting
+- Java Set
+- Java HashSet
+- Java TreeSet
+- Java LinkedHashSet
+- Java Map
+- Java HashMap
+- Java TreeMap
+- Java LinkedHashMap
+- Java Iterator
+- Java Algorithms
+--- 
+- Java Advanced
+- Java Wrapper Classes
+- Java Generics
+- Java Annotations
+- Java RegEx
+- Java Threads
+- Java Lambda
+- Java Advanced Sorting
+---
+- Java Projects
+- Java Projects
+- 
+- Java Cert
+- Java Certificate
+--- 
+- Java How To's
+- Java How Tos
+--- 
+- Java Reference
+- Java Reference
+- Java Keywords
+- Java String Methods
+- Java Math Methods
+- Java Output Methods
+- Java Arrays Methods
+- Java ArrayList Methods
+- Java LinkedList Methods
+- Java HashMap Methods
+- Java Scanner Methods
+- Java File Methods
+- Java FileInputStream
+- Java FileOutputStream
+- Java BufferedReader
+- Java BufferedWriter
+- Java Iterator Methods
+- Java Collections Methods
+- Java System Methods
+- Java Errors & Exceptions
+--- 
+- Java Examples
+- Java Examples
+- Java Videos
+- Java Compiler
+- Java Exercises
+- Java Quiz
+- Java Code Challenges
+- Java Practice Problems
+- Java Server
+- Java Syllabus
+- Java Study Plan
+- Java Interview Q&A
