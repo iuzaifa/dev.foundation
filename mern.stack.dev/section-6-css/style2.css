@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #8a2be2, #4169e1);
+}
+.container .sub-container {
+  background-color: #ebf1ff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 400px;
+  min-width: 250px;
+  border: #4169e1 1px solid;
+}
+
+.container .sub-container h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #303030;
+  margin: 0;
+}
+.container .sub-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #404040;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .sub-container input {
+  margin-bottom: 10px;
+}
+.container .sub-container input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;     
+  outline: #ffffff 1px solid;
+   box-sizing: border-box;
+
+}
+
+.container .sub-container input:first {
+  border: 1px solid #ccc;
+ outline: 2px solid #2ed21c;
+}
+
+.container .sub-container button {
+    background-color: #8a2be2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+
+}

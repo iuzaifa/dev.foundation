@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+
+    <style>
+      .container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .container div {
+        border: 1px solid gray;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Odd items */
+      .container div:nth-child(odd) {
+        background: #e0f2ff;
+        border-color: blue;
+      }
+
+      /* Even items */
+      .container div:nth-child(even) {
+        background: #ffe0e0;
+        border-color: red;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 80%;
+          margin: auto;
+          flex-direction: column;
+          grid-column: calc(auto);
+          row-gap: 33px;  
+        }
+      }
+    </style>
+  </body>
+</html>
