@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: AcademiaProCMS
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/academia_pro
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # use validate / none in production
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always
+
+  security:
+    jwt:
+      secret: "eW91ci12ZXJ5LXNlY3VyZS1zZWNyZXQta2V5LWF0LWxlYXN0LTMyLWNoYXJhY3RlcnMtbG9uZw=="
+      expiration: 3600000   # 1 hour in milliseconds
+
+#  security:
+#    user:
+#      name: admin
+#      password: admin123
+#      roles: ADMIN

@@ -1,0 +1,54 @@
+[
+  {
+    "movieId": 1,
+    "title": "Avengers",
+    "director": "Joss Whedon",
+    "studio": "Marvel Studios",
+    "movieCast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson", "Mark Ruffalo"],
+    "releaseYear": 2012,
+    "poster": "default.png",
+    "posterUrl" : "url"
+  },
+  {
+    "movieId": 2,
+    "title": "Money Heist",
+    "director": "Álex Pina",
+    "studio": "Netflix",
+    "movieCast": [
+      "Úrsula Corberó",
+      "Álvaro Morte",
+      "Pedro Alonso",
+      "Itziar Ituño"
+    ],
+    "releaseYear": 2017,
+    "poster": "moneyheist-poster.png"
+  },
+  {
+    "movieId": 3,
+    "title": "Sonic the Hedgehog",
+    "director": "Jeff Fowler",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Ben Schwartz",
+      "Jim Carrey",
+      "James Marsden",
+      "Tika Sumpter"
+    ],
+    "releaseYear": 2020,
+    "poster": "hedgehog.png"
+  },
+  {
+    "movieId": 4,
+    "title": "Spider-Man",
+    "director": "Sam Raimi",
+    "studio": "Sony Pictures",
+    "movieCast": [
+      "Tobey Maguire",
+      "Kirsten Dunst",
+      "Willem Dafoe",
+      "James Franco"
+    ],
+    "releaseYear": 2002,
+    "poster": "spiderman.jpg"
+  }
+]

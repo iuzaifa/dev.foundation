@@ -1,4 +1,3 @@
-
 - JS Tutorial
 - JS Home
 - JS Introduction
@@ -23,7 +22,6 @@
 - JS Math
 - JS RegExp
 - JS Data Types
-- JS JSON
 - JS Errors
 - JS Debugging
 - JS Style Guide
@@ -33,11 +31,12 @@
 - JS HTML DOM
 - JS HTML Events
 - JS HTML First
-- 
+--- 
 - JS Advanced
 - JS Functions
 - JS Objects
 - JS Classes
+- JS JSON
 - JS Asynchronous
 - JS Modules
 - JS Meta & Proxy
@@ -46,10 +45,11 @@
 - JS Browser API
 - JS Web API
 - JS Graphics
-- 
+--- 
 - Old Technologies
 - JS AJAX
 - JS jQuery
-- 
+- JS JSONP
+--- 
 - JS Examples
 - JS Examples

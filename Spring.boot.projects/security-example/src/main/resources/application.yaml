@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: security-example
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/security_example
+    username: root
+    password: huzaifa#123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # options: none, validate, update, create, create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+#  spring:
+#    jwt:
+#      secret: 6b6f1f4c9d8a7e2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4
+
+
+#  spring:
+#    security:
+#      user:
+#        name: admin
+#        password: admin123
+
+
+
