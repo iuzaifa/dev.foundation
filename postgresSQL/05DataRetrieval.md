@@ -101,4 +101,13 @@ select name as "Employee Name", department as "Department" from employees ;
 ```sql
 select salary as "Monthly Income" , age as "Age" from employees;
 ```
+4. Show employee names with their email domain (@gmail.com or @example.com)
+```sql
+SELECT name, SUBSTRING(email FROM POSITION('@' IN email) + 1) AS "Email Domain" FROM employees;
+```
+5. Display employee name and their annual income with 10% bonus
+```sql
+select email, ( salary * 12 * 1.10) as "Annual with 10% Bonus" from employees;
+
+```
 
