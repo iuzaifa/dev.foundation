@@ -7,9 +7,10 @@ export type Column<T> = {
 type TableProps<T> = {
   columns: Column<T>[];
   data: T[];
+  actions?: (row: T) => React.ReactNode;
 };
 
-export function Table<T>({ columns, data }: TableProps<T>) {
+export function Table<T>({ columns, data , actions}: TableProps<T>) {
   return (
     <>
         <div className="w-full overflow-x-auto">
@@ -21,6 +22,7 @@ export function Table<T>({ columns, data }: TableProps<T>) {
                   {column.header}
                 </th>
               ))}
+              {actions && <th>Actions</th>}
             </tr>
           </thead>
 
@@ -35,6 +37,8 @@ export function Table<T>({ columns, data }: TableProps<T>) {
                     {column.render ? column.render(row) : String(row[column.accessor!])}
                   </td>
                 ))}
+
+                {actions && <td>{actions(row)}</td>}
               </tr>
             ))}
           </tbody>

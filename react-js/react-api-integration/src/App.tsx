@@ -1,12 +1,10 @@
-import UsersRandomUsers from "./components/UsersRandomUsers";
+import AppRouter from "./router/AppRouter";
 
 
 function App () {
     return (
         <>
-            <UsersRandomUsers/>
-
-        
+            <AppRouter/>
         </>
     )
 }

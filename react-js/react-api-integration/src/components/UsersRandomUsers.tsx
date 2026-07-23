@@ -3,7 +3,9 @@ import { getRandomUsers } from "../features/randomUsers/randomUsers.api";
 import { Table, type Column } from "./Table";
 import type { User } from "../types/user.types";
 import { toast, ToastContainer } from "react-toastify";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { TableSkeleton } from "./skeletons/SkeletonTable";
+import { useNavigate } from "react-router-dom";
 
 const columns: Column<User>[] = [
     {
@@ -35,24 +37,19 @@ const columns: Column<User>[] = [
     accessor: "phone",
   },
   
+  
 ];
 
 
 function UsersRandomUsers () {
+    const navigate = useNavigate();
+    const [page, setPage] = useState(1)
+    const limit = 15;
+
     const {data, isLoading, isError } = useQuery({
-        queryKey : ["users"],
-        queryFn : getRandomUsers,
+        queryKey : ["users", page, limit],
+        queryFn : () => getRandomUsers(page, limit),
     });
-
-    useEffect(() => {
-        if(isLoading) {
-            toast.loading("loading users....")
-        }
-        if(!isLoading){
-            toast.dismiss();
-        }
-    })
-
     useEffect(() => {
         if(isError) {
             toast.error("lFaild to fetch users....")
@@ -61,14 +58,38 @@ function UsersRandomUsers () {
             toast.dismiss();
         }
     })
-    
+    if(isLoading) return <TableSkeleton columns={6} rows={10} />;
+
+   
 
 
     return (
         <>
-            <Table columns={columns} data={data?.data.data ?? []} />
+            <Table columns={columns} data={data?.data.data ?? []} actions={(user) => (
+                <>
+                    <div className="flex gap-2 justify-center">
+                        <button onClick={() => navigate(`/users/${user.id}`)}
+                         className="bg-green-200 text-green-600 h-8 w-8 rounded cursor-pointer">
+                             👁
+                         </button>
+                    </div>
 
+                </>
+            )} />
 
+            <div className="flex justify-center gap-5 mt-2">
+                <button disabled={page === 1} onClick={() => setPage((prev) => prev - 1) }
+                
+                className="py-3 w-30 bg-slate-200 text-slate-950 rounded-md cursor-pointer">Previous</button>
+                
+                <button>Total Pages  {data?.data.totalPages} </button>
+                <button>Current Page {data?.data.page}</button>  
+
+                <button onClick={() => setPage((prev) => prev + 1)}
+                className="py-3 w-30 bg-green-200 text-green-950 rounded-md cursor-pointer"
+                >Next</button>
+
+            </div>
             <ToastContainer/>
 
 

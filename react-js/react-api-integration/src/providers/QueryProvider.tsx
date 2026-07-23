@@ -18,7 +18,7 @@ export function QueryProvider({children}: {children : ReactNode}) {
         <>
             <QueryClientProvider client={queryClient}>
                 {children}
-                <ReactQueryDevtools initialIsOpen={false}/>
+                <ReactQueryDevtools initialIsOpen={true}/>
             </QueryClientProvider>
         
         </>

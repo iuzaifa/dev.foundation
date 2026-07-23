@@ -8,6 +8,16 @@ export interface UserResponse {
   success: boolean;
 }
 
+export interface UserResponseById {
+  statusCode: number;
+  data: User;
+  message: string;
+  success: boolean;
+}
+
+
+
+
 export interface UsersData {
   page: number;
   limit: number;
