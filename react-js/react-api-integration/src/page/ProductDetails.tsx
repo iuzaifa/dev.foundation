@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProductDetails() {
     const { productsId } = useParams();
-    const [page, setPage] = useState(1);
-    const limit  = 12;
+    const page = 1;
+    const [limit, setLimit]  = useState<number>(12);
 
 
     const { data, error, isLoading } = useQuery({
@@ -48,7 +48,7 @@ export default function ProductDetails() {
             {/*  */}
 
 
-            <div className="grid grid-cols-6 gap-4 px-5">
+            <div className="grid grid-cols-4 gap-4 px-5 max-w-7xl mx-auto mt-7 pt-20">
 
                 {allProducts.data.data.map((product) => (
                     <ProductCard key={product.id} product={product} />
@@ -56,9 +56,10 @@ export default function ProductDetails() {
 
             </div>
 
-            <button onClick={() => setPage((prev) => prev + 1)}>more</button>
-            <button>{allProducts.data.currentPageItems}</button>
-            <p>Page: {page}</p>
+            <button onClick={() => setLimit((prev:number) => prev + 12)} >More products</button>
+
+
+
 
             <ToastContainer />
         </>

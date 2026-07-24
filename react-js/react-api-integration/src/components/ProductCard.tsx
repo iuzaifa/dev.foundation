@@ -14,6 +14,7 @@ function ProductCard({product} : ProductProps) {
           <span className="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">
             {product.category}
           </span>
+          {/* <h2>{product.id}</h2> */}
 
           <h2 className="text-xl font-semibold mt-3">{product.title}</h2>
 
