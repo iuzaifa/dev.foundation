@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import { getUserById } from "../features/randomUsers/randomUsers.api";
 import UserCard from "../components/UserCard";
+import { getUserById } from "../api/randomUsers/randomUsers.api";
 
 
 export function UserDetails () {

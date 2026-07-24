@@ -1,3 +1,5 @@
+
+
 export interface Product {
   id: number;
   title: string;
@@ -11,6 +13,14 @@ export interface Product {
   thumbnail: string;
   images: string[];
 }
+
+export interface ProductData {
+  statusCode: number;
+  message: string;
+  success: boolean;
+  data : Product
+}
+
 
 export interface ProductsResponse {
   statusCode: number;

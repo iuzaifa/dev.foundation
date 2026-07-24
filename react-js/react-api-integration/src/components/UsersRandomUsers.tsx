@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import { getRandomUsers } from "../features/randomUsers/randomUsers.api";
 import { Table, type Column } from "./Table";
 import type { User } from "../types/user.types";
 import { toast, ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import { TableSkeleton } from "./skeletons/SkeletonTable";
 import { useNavigate } from "react-router-dom";
+import { Eye } from "lucide-react";
+import { getRandomUsers } from "../api/randomUsers/randomUsers.api";
 
 const columns: Column<User>[] = [
     {
@@ -43,7 +44,7 @@ const columns: Column<User>[] = [
 
 function UsersRandomUsers () {
     const navigate = useNavigate();
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState<number>(1)
     const limit = 15;
 
     const {data, isLoading, isError } = useQuery({
@@ -58,7 +59,7 @@ function UsersRandomUsers () {
             toast.dismiss();
         }
     })
-    if(isLoading) return <TableSkeleton columns={6} rows={10} />;
+    if(isLoading) return <TableSkeleton columns={6} rows={15} />;
 
    
 
@@ -69,13 +70,15 @@ function UsersRandomUsers () {
                 <>
                     <div className="flex gap-2 justify-center">
                         <button onClick={() => navigate(`/users/${user.id}`)}
-                         className="bg-green-200 text-green-600 h-8 w-8 rounded cursor-pointer">
-                             👁
+                         className="bg-green-200 text-center flex justify-center text-green-600 p-2 rounded cursor-pointer">
+                             <Eye size={15}/>
                          </button>
                     </div>
 
                 </>
             )} />
+
+
 
             <div className="flex justify-center gap-5 mt-2">
                 <button disabled={page === 1} onClick={() => setPage((prev) => prev - 1) }
