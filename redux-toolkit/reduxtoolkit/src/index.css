@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+    background: #141414;
+}
+*{
+    list-style-type: none;
+}
