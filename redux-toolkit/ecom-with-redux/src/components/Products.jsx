@@ -1,25 +1,40 @@
 import { useEffect } from "react";
 import { ShoppingCart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { add } from "../store/cartSlice";
+import {addToCart } from "../store/cartSlice";
 import { fetchProducts } from "../store/productSlice";
+// import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Products = () => {
   const dispatch = useDispatch();
+  // const { isLoggedIn, user } = useSelector((state) => state.auth.isLoggedIn);
+  const { isLoggedIn, user } = useSelector((state) => state.auth);
 
-  const { items :  products, loading} = useSelector((state) => state.product);
+
+  const { items: products, loading } = useSelector((state) => state.product);
 
   useEffect(() => {
-    dispatch(fetchProducts())
+    dispatch(fetchProducts());
   }, [dispatch]);
 
   const handleAdd = (product) => {
-    dispatch(add(product));
+    if (!isLoggedIn) {
+      toast.error("Please login to add items to your cart.");// error yaha aa raha bol raha hau login first
+      return;
+    }
+
+    dispatch(
+      addToCart({
+        userId: user.id,
+        product: {
+          id: product.id,
+        },
+      }),
+    );
   };
 
   if (loading) return <h2>Loading...</h2>;
-
-
 
   return (
     <>
@@ -36,11 +51,15 @@ const Products = () => {
             />
 
             <h2 className="mt-4 line-clamp-2 text-md font-semibold">
-              {product.title.length > 15 ? `${product.title.slice(0, 25)}...` : product.title }
+              {product.title.length > 15
+                ? `${product.title.slice(0, 25)}...`
+                : product.title}
             </h2>
 
             <p className="mt-2 line-clamp-3 text-sm text-gray-600">
-              {product.description.length > 255 ? `${product.description.slice(0,255)}...` : product.description }
+              {product.description.length > 255
+                ? `${product.description.slice(0, 255)}...`
+                : product.description}
             </p>
 
             <div className="mt-3 flex items-center justify-between">
