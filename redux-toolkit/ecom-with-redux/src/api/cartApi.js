@@ -11,3 +11,8 @@ export const removeCart = async (id) => {
   return data;
 };
 
+
+export const getAllCarts = async () => {
+  const { data } = await api.get(`/carts`);
+  return data;
+};

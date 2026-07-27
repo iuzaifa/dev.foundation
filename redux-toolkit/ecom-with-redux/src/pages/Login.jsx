@@ -20,24 +20,7 @@ const Login = () => {
       [e.target.name]: e.target.value,
     }));
   };
-
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-  //   // dispatch(login(formData));
-  //    try {
-  //   await dispatch(login(formData)).unwrap();
-
-  //   const id = getUserId();
-
-  //   await dispatch(getLoggedInUser(id)).unwrap();
-
-  //   toast.success("Login Success");
-
-  //   navigate("/");
-  // } catch (error) {
-  //   toast.error("Login Failed");
-  // }
-  // };
+ 
   const handleLogin = async (e) => {
     e.preventDefault();
 

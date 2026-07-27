@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ShoppingCart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import {addToCart } from "../store/cartSlice";
+import { addToCart } from "../store/cartSlice";
 import { fetchProducts } from "../store/productSlice";
 // import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -11,25 +11,42 @@ const Products = () => {
   // const { isLoggedIn, user } = useSelector((state) => state.auth.isLoggedIn);
   const { isLoggedIn, user } = useSelector((state) => state.auth);
 
-
   const { items: products, loading } = useSelector((state) => state.product);
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
+  // const handleAdd = (product) => {
+  //   if (!isLoggedIn) {
+  //     toast.error("Please login to add items to your cart.");// error yaha aa raha bol raha hau login first
+  //     return;
+  //   }
+
+  //   dispatch(
+  //     addToCart({
+  //       userId: user.id,
+  //       product: {
+  //         id: product.id,
+  //       },
+  //     }),
+  //   );
+  // };
   const handleAdd = (product) => {
-    if (!isLoggedIn) {
-      toast.error("Please login to add items to your cart.");// error yaha aa raha bol raha hau login first
+    if (!isLoggedIn || !user) {
+      toast.error("Please login first");
       return;
     }
 
     dispatch(
       addToCart({
         userId: user.id,
-        product: {
-          id: product.id,
-        },
+        products: [
+          {
+            productId: product.id,
+            quantity: 1,
+          },
+        ],
       }),
     );
   };

@@ -28,7 +28,7 @@ export const getLoggedInUser = createAsyncThunk(
 const token = localStorage.getItem("token");
 
 const initialState = {
-  token: null,
+  token: token,
   isLoggedIn: !!token,
   loading: false,
   error: null,
