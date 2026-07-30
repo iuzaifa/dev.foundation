@@ -17,3 +17,12 @@ export const getPostById = async (id) => {
         console.log(error)
     }
 }
+
+export const deletePost = async(id) => {
+  try {
+    const response = await apiInstance.delete(`/posts/${id}`);
+    return response.status === 200 ? "Delete Successfully" : []
+  } catch (error) {
+    console.log(error)
+  }
+}
