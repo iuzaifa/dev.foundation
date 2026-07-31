@@ -5,6 +5,8 @@
   list-style-type: none;
 }
 
+
+
 .dark-theme {
   background-color: #161616;
 
@@ -107,11 +109,6 @@ nav {
 .theme-team .page-heading { color: #7c2d12; }
 .theme-team .page-btn { background-color: #7c2d12; }
 .theme-team .page-btn:hover { background-color: #9a3b18; }
-
-.theme-blog .page-heading { color: #1e3a8a; }
-.theme-blog .page-btn { background-color: #1e3a8a; }
-.theme-blog .page-btn:hover { background-color: #2749b0; }
-
 .theme-portfolio .page-heading { color: #581c87; }
 .theme-portfolio .page-btn { background-color: #581c87; }
 .theme-portfolio .page-btn:hover { background-color: #6d28a9; }
