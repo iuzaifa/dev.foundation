@@ -1,10 +1,10 @@
-import Counter from "./feature/counter/Counter.jsx";
+import PostList from "./feature/post/PostList.jsx";
 
 function App() {
 
   return (
      <>
-        <Counter/>
+         <PostList/>
      </>
   )
 }
