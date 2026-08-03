@@ -1,9 +1,20 @@
 import {createSlice, nanoid} from '@reduxjs/toolkit';
+import {sub} from "date-fns"
 
 const initialState = {
     posts: [
-        {id : `1`, title : `Learning Redux Toolkit`, content : `Redux Toolkit simplifies state management with less boilerplate using createSlice, configureStore, and built-in Immer support.`},
-        {id : `2`, title : `Learning React with Redux Toolkit`, content : `Combining React with Redux Toolkit helps manage global state efficiently while keeping components clean and predictable.`},
+        {
+            id : `1`,
+            title : `Learning Redux Toolkit`, 
+            content : `Redux Toolkit simplifies state management with less boilerplate using createSlice, configureStore, and built-in Immer support.`,
+            date : sub(new Date, {minutes : 10}).toDateString(),
+        },
+        {
+            id : `2`,
+            title : `Learning React with Redux Toolkit`,
+            content : `Combining React with Redux Toolkit helps manage global state efficiently while keeping components clean and predictable.`,
+            date : sub(new Date, {minutes : 10}).toDateString(),
+        },
     ],
 }
 
@@ -15,12 +26,14 @@ export const postSlice = createSlice ({
             reducer (state, action) {
                 state.posts.push(action.payload)
             },
-            prepare (title, content) {
+            prepare (title, content, userID,) {
                 return {
                     payload : {
-                        id : nanoid,
+                        id : nanoid(),
                         title,
-                        content
+                        content,
+                        date : new Date().toDateString(),
+                        userID
                     }
                 }
             }

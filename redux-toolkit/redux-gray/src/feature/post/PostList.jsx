@@ -1,10 +1,13 @@
 import {useSelector} from "react-redux";
 import {selectAllPosts} from "./postSlice.js";
 import AddPostForm from "./AddPostForm.jsx";
+import PostAuther from "./PostAuther.jsx";
 
 
 function PostList () {
     const posts = useSelector (selectAllPosts)
+
+    console.log("posts: ",  posts)
 
 
 
@@ -23,6 +26,10 @@ function PostList () {
                                 <article key={post.id} className={aric}>
                                     <h2 className={`text-md font-semibold`}>{post.title.substring(0,20)}</h2>
                                     <p className={`text-xs`}>{post.content.substring(0,100)}</p>
+
+                                    <p className="text-[10px] font-semibold text-amber-600">
+                                        <PostAuther userID={post.userID} />
+                                    </p>
                                 </article>
                             ))}
                         </div>
